@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import app from "../firebaseConfig";
 import { getDatabase, ref, set, push } from "firebase/database";
+import { useNavigate } from 'react-router-dom';
 
 function Write() {
+    const navigate = useNavigate();
+
     let [inputValue1, setInputValue1] = useState('');
     let [inputValue2, setInputValue2] = useState('');
 
@@ -25,6 +28,9 @@ function Write() {
             <input type='text' value={inputValue2 } onChange={(e) => setInputValue2(e.target.value)}/> <br />
 
             <button onClick={saveData}>SAVE DATA</button>
+
+            <button className='button1' onClick={ () => navigate("/")}>GO HOMEPAGE</button> <br  />
+            <button className='button1' onClick={ () => navigate("/updateread")}>GO READ PAGE</button>
         </div>
     )
 }

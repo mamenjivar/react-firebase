@@ -7,3 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rosybrown;
 }
+
+.App {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.button1 {
+  background-color: aquamarine;
+  font-weight: bolder;
+  font-size: 19px;
+}
