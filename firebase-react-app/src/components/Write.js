@@ -23,6 +23,7 @@ function Write() {
     }
     return (
         <div>
+            <h1>WRITE</h1>
             <input type='text' value={inputValue1} onChange={(e) => setInputValue1(e.target.value)}/>
 
             <input type='text' value={inputValue2 } onChange={(e) => setInputValue2(e.target.value)}/> <br />
