@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import app from "../firebaseConfig";
+import {app} from "../firebaseConfig";
 import { getDatabase, ref, set, get } from "firebase/database";
 import { useNavigate, useParams } from 'react-router-dom';
 
