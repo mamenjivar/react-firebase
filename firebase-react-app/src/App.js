@@ -5,6 +5,7 @@ import { auth } from "./firebaseConfig";
 
 import Write from './components/Write';
 import Read from './components/Read';
+import Pictures from "./components/Pictures";
 import UpdateRead from "./components/UpdateRead";
 import UpdateWrite from "./components/UpdateWrite";
 import { ProtectedRoute } from "./components/protectedRoute";
@@ -41,7 +42,7 @@ function App() {
         <Routes>
           <Route index path="/home" element={ <Home user={user}/>} />
           <Route path="/private" element={ <ProtectedRoute user={user}><Private></Private></ProtectedRoute>}></Route>
-          <Route path="/" element={ <Write />} />
+          <Route path="/" element={ <Pictures />} /> 
           <Route path="/write" element={ <Write />} />
           <Route path="/read" element={ <Read />} />
           <Route path="/updateread" element={ <UpdateRead />} />
