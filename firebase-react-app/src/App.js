@@ -8,6 +8,8 @@ import Read from './components/Read';
 import Pictures from "./components/Pictures";
 import UpdateRead from "./components/UpdateRead";
 import UpdateWrite from "./components/UpdateWrite";
+import PictureWrite from "./components/PictureWrite";
+
 import { ProtectedRoute } from "./components/protectedRoute";
 
 import { Home } from "./pages/Home";
@@ -43,6 +45,7 @@ function App() {
           <Route index path="/home" element={ <Home user={user}/>} />
           <Route path="/private" element={ <ProtectedRoute user={user}><Private></Private></ProtectedRoute>}></Route>
           <Route path="/" element={ <Pictures />} /> 
+          <Route path="/picturewrite" element={ <PictureWrite />} /> 
           <Route path="/write" element={ <Write />} />
           <Route path="/read" element={ <Read />} />
           <Route path="/updateread" element={ <UpdateRead />} />

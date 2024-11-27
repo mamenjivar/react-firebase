@@ -4,6 +4,7 @@ import { ref, uploadBytes, listAll, getDownloadURL } from 'firebase/storage';
 import { v4 } from 'uuid';
 
 // uploading pictures to firebase page
+// see gemini chat to see how to link it with database. See if can build an example. create a new page
 function Pictures() {
     const [imageUpload, setImageUpload] = useState(null);
     const [imageList, setImageList] = useState([]);
@@ -48,7 +49,8 @@ function Pictures() {
             <h1>UPLOAD PICTURES</h1>
 
             <div className='App'>
-                <input type="file" onChange={(event) => { setImageUpload(event.target.files[0])}} />
+                <input type="file" onChange={(event) => { setImageUpload(event.target.files[0])}} /> <br />
+
                 <button onClick={uploadImage}>Upload Image</button>
 
                 {imageList.map((url) => {

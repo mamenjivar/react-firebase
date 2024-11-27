@@ -9,7 +9,7 @@ function Read() {
 
     const fetchData = async () => {
         const db = getDatabase(app);
-        const dbRef = ref(db, "nature/fruits");
+        const dbRef = ref(db, "natur/fruits");
         const snapshot = await get(dbRef);
         if(snapshot.exists()) {
             setFruitArray(Object.values(snapshot.val()));
@@ -24,7 +24,7 @@ function Read() {
         <ul>
             {fruitArray.map((item, index) => (
                 <li key={index}>
-                    {item.fruitName}: {item.fruitDefinition}
+                    <img src={item.profilePicture} />: {item.fruitName}: {item.fruitDefinition}
                 </li>
             ))}
         </ul>
